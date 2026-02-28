@@ -1,0 +1,27 @@
+spring.application.name=GopherThrifting
+
+# MySQL Datasource
+spring.datasource.url=${DATABASE_URL:jdbc:mysql://localhost:3306/gopher_thrifting}
+spring.datasource.username=${DATABASE_USERNAME:root}
+spring.datasource.password=${DATABASE_PASSWORD:your_mysql_password}
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# JPA / Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=false
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
+# Gmail SMTP
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=${MAIL_USERNAME:your_email@gmail.com}
+spring.mail.password=${MAIL_PASSWORD:your_app_password}
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+
+# JWT
+jwt.secret=${JWT_SECRET:your_jwt_secret_key}
+jwt.expiration=86400000
+
+# OTP
+otp.expiration.minutes=5
